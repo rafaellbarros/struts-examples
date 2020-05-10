@@ -4,10 +4,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.developer</groupId>
-    <artifactId>struts2-crud-jquery</artifactId>
+    <artifactId>struts2-jboss-cdi-jta</artifactId>
    	<version>0.0.1-SNAPSHOT</version>
-    <name>Basic Struts2 Crud Jquery Example</name>
-    <description>Basic Struts2 Crud Jquery example application</description>
+    <name>Basic Struts2 Jboss CDI JTA Example</name>
+    <description>Basic Struts2 Jboss CDI JTA example application</description>
     <packaging>war</packaging>
 	
 	<properties>
@@ -56,7 +56,12 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.version}</version>
-		</dependency>		
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.4-1206-jdbc42</version>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -65,7 +70,7 @@
 		</dependency>			
 	</dependencies>    
     <build>
-        <finalName>struts2-crud-jquery</finalName>
+        <finalName>struts2-jboss-cdi-jta</finalName>
         <plugins>      
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

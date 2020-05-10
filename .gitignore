@@ -7,3 +7,4 @@ bin/
 target/
 out/
 *.iml
+.factorypath
