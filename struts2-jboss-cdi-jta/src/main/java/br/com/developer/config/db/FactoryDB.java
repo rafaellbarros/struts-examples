@@ -10,6 +10,8 @@ public class FactoryDB {
                 return MysqlDB.getConnetion();
             case 2:
                 return PostgresDB.getConnetion();
+            case 3:
+                return OracleDB.getConnetion();
             default:
                 throw new RuntimeException("dbId não existe!");
         }
