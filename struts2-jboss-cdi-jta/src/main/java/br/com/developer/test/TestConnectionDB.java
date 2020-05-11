@@ -9,7 +9,7 @@ public class TestConnectionDB {
 
 	public static void main(String[] args) {
 		try {
-			Connection conn = ConnectionDB.getConnetion();
+			Connection conn = ConnectionDB.getConnetion(3);
 			System.out.println("Abrindo conexão com Banco!");
 			conn.close();
 			System.out.println("Fechando conexão com Banco!");
