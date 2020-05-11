@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionDB {
-	public static Connection getConnetion() {
-		return FactoryDB.create(2);
+	public static Connection getConnetion(int dbId) {
+		return FactoryDB.create(dbId);
 	}
 }
