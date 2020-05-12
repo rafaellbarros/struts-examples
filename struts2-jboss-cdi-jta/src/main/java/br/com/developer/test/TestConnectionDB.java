@@ -9,7 +9,8 @@ public class TestConnectionDB {
 
 	public static void main(String[] args) {
 		try {
-			Connection conn = ConnectionDB.getConnetion(3);
+			int mysqlId = 1;
+			Connection conn = ConnectionDB.getConnetion(mysqlId);
 			System.out.println("Abrindo conexão com Banco!");
 			conn.close();
 			System.out.println("Fechando conexão com Banco!");
