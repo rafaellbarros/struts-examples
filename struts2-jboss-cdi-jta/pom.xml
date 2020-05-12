@@ -16,7 +16,6 @@
 		<java.version>1.8</java.version>
 	
 		<struts2.version>2.5.22</struts2.version>
-		<log4j2.version>2.10.0</log4j2.version>
 		<mysql.version>5.1.42</mysql.version>
 		<lombok.version>1.18.10</lombok.version>
 	</properties>    
@@ -51,13 +50,6 @@
 				<artifactId>weld-se-core</artifactId>
 				<version>2.4.8.Final</version>
 			</dependency>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-bom</artifactId>
-				<version>${log4j2.version}</version>
-				<scope>import</scope>
-				<type>pom</type>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>    
 	<dependencies>
@@ -82,14 +74,6 @@
 			<artifactId>weld-se-core</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>org.apache.logging.log4j</groupId>
-		    <artifactId>log4j-core</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.apache.logging.log4j</groupId>
-		    <artifactId>log4j-api</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.version}</version>
@@ -100,9 +84,15 @@
 			<version>9.4-1206-jdbc42</version>
 		</dependency>
 		<dependency>
-			<groupId>com.oracle</groupId>
+			<groupId>com.oracle.ojdbc</groupId>
 			<artifactId>ojdbc8</artifactId>
-			<version>12.2.0.1</version>
+			<version>19.3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.3.6.Final</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
