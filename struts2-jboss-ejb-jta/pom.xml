@@ -15,14 +15,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-
 		<struts2.version>2.5.22</struts2.version>
-    	<cdi-api.version>2.0.SP1</cdi-api.version>
-    	<weld.version>2.4.8.Final</weld.version>
+		<hibernate-entitymanager.version>5.4.15.Final</hibernate-entitymanager.version>
 		<mysql.version>5.1.42</mysql.version>
     	<oracle.version>19.3.0.0</oracle.version>
     	<postgres.version>9.4-1206-jdbc42</postgres.version>
-    	<hibernate-entitymanager.version>4.3.6.Final</hibernate-entitymanager.version>
 		<lombok.version>1.18.10</lombok.version>
 		<log4j.version>2.13.2</log4j.version>
     	<maven.version>3.3</maven.version>
@@ -36,6 +33,12 @@
 				<version>${struts2.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>${hibernate-entitymanager.version}</version>
+				<scope>provided</scope>
 			</dependency>
 		  	<dependency>
 				<groupId>mysql</groupId>
@@ -75,6 +78,10 @@
 		<dependency>
 		    <groupId>org.apache.struts</groupId>
 		    <artifactId>struts2-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
