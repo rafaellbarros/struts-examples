@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Data
 @Entity
 @EqualsAndHashCode(of = "codigo")
-@Table(name="tb_cliente")
+@Table(name="cliente")
 public class Cliente {
 
     @Id
