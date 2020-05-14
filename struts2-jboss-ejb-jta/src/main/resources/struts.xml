@@ -5,12 +5,17 @@
 
 <struts>
 
+	<constant name="struts.objectFactory.cdi.jndiKey" value="java:comp/some/weird/BeanManagerReference" />
+
 	<constant name="struts.enable.DynamicMethodInvocation" value="false"/>
 	<constant name="struts.devMode" value="true"/>
 
 	<package name="basic-struts2" extends="struts-default">
 		<action name="index">
 			<result>/index.jsp</result>
+		</action>
+		<action name="cliente" class="br.com.developer.action.ClienteAction">
+			<result>/pages/cliente.jsp</result>
 		</action>
 	</package>
 
