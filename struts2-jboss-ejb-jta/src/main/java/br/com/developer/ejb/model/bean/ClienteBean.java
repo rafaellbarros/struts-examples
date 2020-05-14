@@ -1,22 +1,19 @@
 package br.com.developer.ejb.model.bean;
 
+import br.com.developer.ejb.model.bean.remote.ClienteRemote;
 import br.com.developer.ejb.model.entity.Cliente;
 
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import java.util.ArrayList;
 import java.util.List;
 
+@Stateless
+public class ClienteBean implements ClienteRemote {
 
-public interface ClienteBean {
-
-    boolean create(Cliente cliente);
-
-    Cliente getById(Long id);
-
-    List<Cliente> findAll();
-
-    void update(Cliente cliente);
-
-    void delete(Long id);
+    @Override
+    public List<Cliente> findAll() {
+        List<Cliente> clientes = new ArrayList<>();
+        clientes.add(new Cliente(1L, "Rafael", 31,"M", "Developer"));
+        return clientes;
+    }
 }
