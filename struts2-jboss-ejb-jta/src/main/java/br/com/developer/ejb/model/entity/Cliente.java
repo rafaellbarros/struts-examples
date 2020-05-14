@@ -1,15 +1,20 @@
 package br.com.developer.ejb.model.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Data
 @Entity
 @EqualsAndHashCode(of = "codigo")
 @Table(name="cliente")
-public class Cliente {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Cliente implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
