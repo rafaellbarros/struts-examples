@@ -1,4 +1,4 @@
-package br.com.developer.ejb.model.entity;
+package br.com.developer.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
