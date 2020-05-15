@@ -2,8 +2,10 @@ package br.com.developer.dao;
 
 import br.com.developer.model.entity.Cliente;
 
+import javax.ejb.Local;
 import java.util.List;
 
+@Local
 public interface ClienteDAO {
 
     boolean create(Cliente cliente);
@@ -16,4 +18,5 @@ public interface ClienteDAO {
 
     void delete(Long id);
 
+    void delete(Cliente cliente);
 }

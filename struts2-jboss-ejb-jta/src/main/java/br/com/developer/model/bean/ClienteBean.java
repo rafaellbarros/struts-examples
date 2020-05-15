@@ -39,4 +39,11 @@ public class ClienteBean implements ClienteRemote {
     public void delete(Long id) {
         service.delete(id);
     }
+
+    @Override
+    public void delete(Cliente cliente) {
+        service.delete(cliente);
+    }
+
+
 }

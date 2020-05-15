@@ -18,4 +18,6 @@ public interface ClienteRemote {
 
     void delete(Long id);
 
+    void delete(Cliente cliente);
+
 }

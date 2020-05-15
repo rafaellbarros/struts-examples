@@ -4,13 +4,11 @@ import br.com.developer.dao.ClienteDAO;
 import br.com.developer.model.entity.Cliente;
 import br.com.developer.service.ClienteService;
 
-import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.List;
 
 @Stateless
-@Local
 public class ClienteServiceImpl implements ClienteService {
 
     @Inject
@@ -39,5 +37,10 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public void delete(Long id) {
         dao.delete(id);
+    }
+
+    @Override
+    public void delete(Cliente cliente) {
+        dao.delete(cliente);
     }
 }

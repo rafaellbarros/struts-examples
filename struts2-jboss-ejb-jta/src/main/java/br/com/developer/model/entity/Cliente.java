@@ -14,7 +14,15 @@ import java.io.Serializable;
 @Table(name="cliente")
 @AllArgsConstructor
 @NoArgsConstructor
+@NamedQueries({
+        @NamedQuery(
+                name = Cliente.OBTER_TODOS,
+                query = "SELECT c FROM Cliente c"
+        )
+})
 public class Cliente implements Serializable {
+
+    public static final String OBTER_TODOS = "Cliente.obterTodos";
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
