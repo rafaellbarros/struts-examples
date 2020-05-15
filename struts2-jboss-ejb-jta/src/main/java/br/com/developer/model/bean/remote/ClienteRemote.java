@@ -1,4 +1,4 @@
-package br.com.developer.ejb.model.bean.remote;
+package br.com.developer.model.bean.remote;
 
 import br.com.developer.model.entity.Cliente;
 

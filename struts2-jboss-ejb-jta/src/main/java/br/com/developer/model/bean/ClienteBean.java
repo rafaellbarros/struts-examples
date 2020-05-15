@@ -1,56 +1,42 @@
-package br.com.developer.ejb.model.bean;
+package br.com.developer.model.bean;
 
-import br.com.developer.ejb.model.bean.remote.ClienteRemote;
+import br.com.developer.model.bean.remote.ClienteRemote;
 import br.com.developer.model.entity.Cliente;
+import br.com.developer.service.ClienteService;
+import br.com.developer.service.impl.ClienteServiceImpl;
 
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.transaction.Transactional;
+import javax.inject.Inject;
 import java.util.List;
 
 @Stateless
 public class ClienteBean implements ClienteRemote {
 
-    @PersistenceContext(unitName="projetoJbossPU")
-    private EntityManager em;
-
+    @Inject
+    private ClienteService service;
 
     @Override
-    @Transactional
     public boolean create(Cliente cliente) {
-        em.persist(cliente);
-        return true;
+        return service.create(cliente);
     }
 
     @Override
     public Cliente getById(Long id) {
-        Query query = em.createQuery("SELECT c FROM Cliente c WHERE c.id = :ID");
-        query.setParameter("ID", id);
-        Cliente cliente = (Cliente) query.getSingleResult();
-        return cliente;
+        return service.getById(id);
     }
 
     @Override
     public List<Cliente> findAll() {
-        Query query = em.createQuery("SELECT e FROM Cliente e");
-        List<Cliente> clientes = query.getResultList();
-        return clientes;
+        return service.findAll();
     }
 
     @Override
-    @Transactional
     public void update(Cliente cliente) {
-        em.merge(cliente);
+        service.update(cliente);
     }
-
 
     @Override
     public void delete(Long id) {
-        Query query = em.createQuery("DELETE FROM Cliente c WHERE c.id = :ID");
-        query.setParameter("ID", id);
-        query.executeUpdate();
+        service.delete(id);
     }
-
 }
