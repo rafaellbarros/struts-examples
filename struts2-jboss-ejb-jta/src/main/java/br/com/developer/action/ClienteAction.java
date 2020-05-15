@@ -1,8 +1,8 @@
 package br.com.developer.action;
 
-import br.com.developer.ejb.model.bean.config.ClienteBeanConfig;
-import br.com.developer.ejb.model.bean.remote.ClienteRemote;
-import br.com.developer.ejb.model.entity.Cliente;
+import br.com.developer.model.bean.config.ClienteBeanConfig;
+import br.com.developer.model.bean.remote.ClienteRemote;
+import br.com.developer.model.entity.Cliente;
 import com.opensymphony.xwork2.ActionSupport;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 public class ClienteAction extends ActionSupport {
 
-    private static final String EJB_CLIENTE = "ejb:/struts2-jboss-ejb-jta/ClienteBean!br.com.developer.ejb.model.bean.remote.ClienteRemote";
+    private static final String EJB_CLIENTE = "ejb:/struts2-jboss-ejb-jta/ClienteBean!br.com.developer.model.bean.remote.ClienteRemote";
 
     private ClienteRemote clienteRemote = new ClienteBeanConfig().lookupDefaultBean(EJB_CLIENTE);
 
