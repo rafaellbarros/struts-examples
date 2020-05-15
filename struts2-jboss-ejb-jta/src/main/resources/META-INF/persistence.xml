@@ -7,7 +7,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <jta-data-source>java:/projetoJbossDS</jta-data-source>
 
-        <class>br.com.developer.ejb.model.entity.Cliente</class>
+        <class>br.com.developer.model.entity.Cliente</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
