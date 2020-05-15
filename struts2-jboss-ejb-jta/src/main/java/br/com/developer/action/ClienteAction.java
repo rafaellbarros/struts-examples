@@ -1,5 +1,6 @@
 package br.com.developer.action;
 
+import br.com.developer.model.bean.builder.ConfigBuilder;
 import br.com.developer.model.bean.config.ClienteBeanConfig;
 import br.com.developer.model.bean.remote.ClienteRemote;
 import br.com.developer.model.entity.Cliente;
@@ -13,13 +14,15 @@ import java.util.List;
 @Setter
 public class ClienteAction extends ActionSupport {
 
-    private static final String EJB_CLIENTE = "ejb:/struts2-jboss-ejb-jta/ClienteBean!br.com.developer.model.bean.remote.ClienteRemote";
-
-    private ClienteRemote clienteRemote = new ClienteBeanConfig().lookupDefaultBean(EJB_CLIENTE);
+    private ClienteRemote clienteRemote;
 
     String titulo;
 
     private List<Cliente> clientes;
+
+    public ClienteAction() {
+         clienteRemote = new ClienteBeanConfig().getConfig();
+    }
 
     @Override
     public String execute() throws Exception {

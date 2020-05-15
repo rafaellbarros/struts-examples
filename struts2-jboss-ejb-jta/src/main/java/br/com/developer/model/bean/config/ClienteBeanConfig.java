@@ -1,7 +1,21 @@
 package br.com.developer.model.bean.config;
 
+import br.com.developer.model.bean.builder.ConfigBuilder;
 import br.com.developer.model.bean.remote.ClienteRemote;
-import br.com.developer.model.bean.remote.LookupDefault;
+import lombok.Getter;
 
-public class ClienteBeanConfig implements LookupDefault<ClienteRemote> {
+public class ClienteBeanConfig {
+
+    private static final String EJB_CLIENTE_REMOTE = "ejb:/struts2-jboss-ejb-jta/ClienteBean!br.com.developer.model.bean.remote.ClienteRemote";
+
+    @Getter
+    private ClienteRemote config;
+
+    private ConfigBuilder builder;
+
+    public ClienteBeanConfig() {
+        builder = new ConfigBuilder<ClienteRemote>(EJB_CLIENTE_REMOTE);
+        config = (ClienteRemote) builder.build();
+    }
+
 }

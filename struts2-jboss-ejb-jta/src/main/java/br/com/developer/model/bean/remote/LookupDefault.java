@@ -1,5 +1,6 @@
 package br.com.developer.model.bean.remote;
 
+import javax.ejb.Local;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import java.util.logging.Level;
@@ -16,5 +17,4 @@ public interface LookupDefault<T> {
             throw new RuntimeException(ne);
         }
     }
-
 }

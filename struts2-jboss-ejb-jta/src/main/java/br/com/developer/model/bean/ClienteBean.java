@@ -3,7 +3,6 @@ package br.com.developer.model.bean;
 import br.com.developer.model.bean.remote.ClienteRemote;
 import br.com.developer.model.entity.Cliente;
 import br.com.developer.service.ClienteService;
-import br.com.developer.service.impl.ClienteServiceImpl;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
