@@ -1,16 +1,13 @@
 package br.com.developer.action;
 
+import br.com.developer.ejb.model.bean.config.ClienteBeanConfig;
 import br.com.developer.ejb.model.bean.remote.ClienteRemote;
 import br.com.developer.ejb.model.entity.Cliente;
 import com.opensymphony.xwork2.ActionSupport;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 @Getter
 @Setter
@@ -18,7 +15,7 @@ public class ClienteAction extends ActionSupport {
 
     private static final String EJB_CLIENTE = "ejb:/struts2-jboss-ejb-jta/ClienteBean!br.com.developer.ejb.model.bean.remote.ClienteRemote";
 
-    private ClienteRemote clienteRemote = lookupClienteBean();
+    private ClienteRemote clienteRemote = new ClienteBeanConfig().lookupDefaultBean(EJB_CLIENTE);
 
     String titulo;
 
@@ -26,7 +23,7 @@ public class ClienteAction extends ActionSupport {
 
     @Override
     public String execute() throws Exception {
-       setTitulo("Mortal XI");
+       setTitulo("Clientes");
 
         List<Cliente> clientes = clienteRemote.findAll();
 
@@ -35,14 +32,4 @@ public class ClienteAction extends ActionSupport {
         return SUCCESS;
     }
 
-
-    public ClienteRemote lookupClienteBean() {
-        try {
-            InitialContext ic = new InitialContext();
-            return (ClienteRemote) ic.lookup(EJB_CLIENTE);
-        } catch (NamingException ne) {
-            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
-            throw new RuntimeException(ne);
-        }
-    }
 }
