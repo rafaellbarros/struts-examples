@@ -1,10 +1,13 @@
-package br.com.developer.model.bean.remote;
+package br.com.developer.model.bean.remote.core;
 
-import javax.ejb.Local;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+/**
+ * @author  Rafael Barros <rafaelbarros.df@gmail.com>
+ */
 
 public interface LookupDefault<T> {
 
