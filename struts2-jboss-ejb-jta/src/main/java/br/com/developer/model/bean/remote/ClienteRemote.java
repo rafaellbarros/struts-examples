@@ -1,23 +1,15 @@
 package br.com.developer.model.bean.remote;
 
+import br.com.developer.model.bean.remote.core.AppRemote;
 import br.com.developer.model.entity.Cliente;
 
 import javax.ejb.Remote;
-import java.util.List;
+
+/**
+ * @author  Rafael Barros <rafaelbarros.df@gmail.com>
+ */
 
 @Remote
-public interface ClienteRemote {
-
-    boolean create(Cliente cliente);
-
-    Cliente getById(Long id);
-
-    List<Cliente> findAll();
-
-    void update(Cliente cliente);
-
-    void delete(Long id);
-
-    void delete(Cliente cliente);
+public interface ClienteRemote extends AppRemote<Cliente, Long> {
 
 }
