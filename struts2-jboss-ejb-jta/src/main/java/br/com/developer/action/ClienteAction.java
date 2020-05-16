@@ -40,9 +40,7 @@ public class ClienteAction extends ActionSupport {
         c.setSexo("M");
         c.setProfissao("Developer");
 
-        final boolean incluir = clienteRemote.incluir(c);
-
-        System.out.println("Show Incluir => " + incluir);
+        // final boolean incluir = clienteRemote.incluir(c);
 
         final Cliente cliente = clienteRemote.obterPorId(1L);
 
