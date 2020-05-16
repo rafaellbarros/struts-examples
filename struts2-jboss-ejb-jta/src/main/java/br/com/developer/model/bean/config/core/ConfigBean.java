@@ -1,7 +1,11 @@
-package br.com.developer.model.bean.config;
+package br.com.developer.model.bean.config.core;
 
-import br.com.developer.model.bean.remote.LookupDefault;
+import br.com.developer.model.bean.remote.core.LookupDefault;
 import lombok.Getter;
+
+/**
+ * @author  Rafael Barros <rafaelbarros.df@gmail.com>
+ */
 
 @Getter
 public class ConfigBean<T> implements LookupDefault<T> {

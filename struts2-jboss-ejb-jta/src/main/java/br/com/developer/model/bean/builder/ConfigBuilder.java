@@ -1,6 +1,10 @@
 package br.com.developer.model.bean.builder;
 
-import br.com.developer.model.bean.config.ConfigBean;
+import br.com.developer.model.bean.config.core.ConfigBean;
+
+/**
+ * @author  Rafael Barros <rafaelbarros.df@gmail.com>
+ */
 
 public class ConfigBuilder<T> {
 

@@ -4,6 +4,10 @@ import br.com.developer.model.bean.builder.ConfigBuilder;
 import br.com.developer.model.bean.remote.ClienteRemote;
 import lombok.Getter;
 
+/**
+ * @author  Rafael Barros <rafaelbarros.df@gmail.com>
+ */
+
 public class ClienteBeanConfig {
 
     private static final String EJB_CLIENTE_REMOTE = "ejb:/struts2-jboss-ejb-jta/ClienteBean!br.com.developer.model.bean.remote.ClienteRemote";
