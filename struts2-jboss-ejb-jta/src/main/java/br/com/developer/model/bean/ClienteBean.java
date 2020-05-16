@@ -8,6 +8,10 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.List;
 
+/**
+ * @author  Rafael Barros <rafaelbarros.df@gmail.com>
+ */
+
 @Stateless
 public class ClienteBean implements ClienteRemote {
 
@@ -15,34 +19,38 @@ public class ClienteBean implements ClienteRemote {
     private ClienteService service;
 
     @Override
-    public boolean create(Cliente cliente) {
-        return service.create(cliente);
+    public Cliente obterPorId(Long id) {
+        return service.obterPorId(id);
     }
 
     @Override
-    public Cliente getById(Long id) {
-        return service.getById(id);
+    public List<Cliente> obterTodos() {
+        return service.obterTodos();
     }
 
     @Override
-    public List<Cliente> findAll() {
-        return service.findAll();
+    public boolean incluir(Cliente cliente) {
+        return service.incluir(cliente);
     }
 
     @Override
-    public void update(Cliente cliente) {
-        service.update(cliente);
+    public boolean alterar(Cliente cliente) {
+        return service.alterar(cliente);
     }
 
     @Override
-    public void delete(Long id) {
-        service.delete(id);
+    public void excluirPorId(Long id) {
+        service.excluirPorId(id);
     }
 
     @Override
-    public void delete(Cliente cliente) {
-        service.delete(cliente);
+    public void excluir(Cliente entity) {
+        service.excluir(entity);
     }
 
+    @Override
+    public Long contarTodos() {
+        return service.contarTodos();
+    }
 
 }
