@@ -1,18 +1,19 @@
 package br.com.developer.model.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import br.com.developer.model.entity.core.BaseEntity;
+import lombok.*;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
-@Data
+/**
+ * @author  Rafael Barros <rafaelbarros.df@gmail.com>
+ */
+
+@ToString
+@Getter
+@Setter
 @Entity
-@EqualsAndHashCode(of = "codigo")
-@Table(name="cliente")
-@AllArgsConstructor
+@Table(name="cliente", schema = "cadastro_cliente")
 @NoArgsConstructor
 @NamedQueries({
         @NamedQuery(
@@ -20,13 +21,17 @@ import java.io.Serializable;
                 query = "SELECT c FROM Cliente c"
         )
 })
-public class Cliente implements Serializable {
+public class Cliente extends BaseEntity<Long> {
+
+    private static final long serialVersionUID = 1L;
 
     public static final String OBTER_TODOS = "Cliente.obterTodos";
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long codigo;
+    @Column(name = "codigo", unique = true, nullable = false)
+    private Long id;
+
     private String nome;
     private Integer idade;
     private String sexo;
