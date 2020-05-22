@@ -9,10 +9,21 @@
 	<constant name="struts.enable.DynamicMethodInvocation" value="false"/>
 	<constant name="struts.devMode" value="true"/>
 
-	<package name="basic-struts2" extends="struts-default">
+	<package name="basic-struts2" namespace="/" extends="struts-default">
 		<action name="index">
 			<result>/index.jsp</result>
 		</action>
+
+		<action name="usuarioAction"
+				class="br.com.developer.action.UsuarioAction" >
+			<result name="success">pages/usuario.jsp</result>
+		</action>
+
+		<action name="usuarioSpringAction"
+				class="usuarioSpringAction" >
+			<result name="success">pages/usuario.jsp</result>
+		</action>
+
 	</package>
 
 </struts>
