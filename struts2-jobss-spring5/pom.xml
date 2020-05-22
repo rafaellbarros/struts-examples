@@ -16,6 +16,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<struts2.version>2.5.22</struts2.version>
+		<spring.version>5.2.6.RELEASE</spring.version>
 		<lombok.version>1.18.10</lombok.version>
 		<log4j.version>2.13.2</log4j.version>
     	<maven.version>3.3</maven.version>
@@ -23,19 +24,35 @@
 
 	<dependencyManagement>
 		<dependencies>
+
+			<!-- Struts 2 -->
 			<dependency>
 				<groupId>org.apache.struts</groupId>
-				<artifactId>struts2-bom</artifactId>
+				<artifactId>struts2-core</artifactId>
 				<version>${struts2.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
 			</dependency>
+
+			<!-- Spring framework -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- Lombok -->
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
 				<version>${lombok.version}</version>
 				<scope>provided</scope>
 			</dependency>
+
+			<!-- Log4j -->
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
 				<artifactId>log4j-api</artifactId>
@@ -46,6 +63,7 @@
 				<artifactId>log4j-core</artifactId>
 				<version>${log4j.version}</version>
 			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -53,6 +71,14 @@
 		<dependency>
 		    <groupId>org.apache.struts</groupId>
 		    <artifactId>struts2-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
