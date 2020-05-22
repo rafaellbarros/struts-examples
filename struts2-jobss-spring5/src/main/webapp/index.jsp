@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: rafael
-  Date: 16/05/2020
-  Time: 12:00
+  Date: 22/05/2020
+  Time: 01:45
   To change this template use File | Settings | File Templates.
 --%>
 <!DOCTYPE html>
@@ -10,10 +10,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Basic Struts2 JBoss EJB JTA Application - Welcome</title>
+    <title>Basic Struts2 JBoss Spring5 Application</title>
 </head>
 
 <body>
-<h1>Welcome To Struts 2!</h1>
+<h1>Welcome To Struts2 JBoss Spring5 Application!</h1>
 </body>
 </html>
