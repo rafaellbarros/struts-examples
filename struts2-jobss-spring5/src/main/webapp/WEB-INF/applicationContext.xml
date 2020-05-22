@@ -4,5 +4,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
+    <bean id="usuario" class="br.com.developer.model.Usuario" />
+
+    <bean id="usuarioService" class="br.com.developer.service.impl.UsuarioServiceImpl" >
+        <property name="usuario" ref="usuario" />
+    </bean>
+
+    <bean id="usuarioSpringAction" class="br.com.developer.action.UsuarioSpringAction">
+        <property name="usuarioService" ref="usuarioService" />
+    </bean>
 
 </beans>
