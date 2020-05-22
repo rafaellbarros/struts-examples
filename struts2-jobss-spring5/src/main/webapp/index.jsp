@@ -3,7 +3,6 @@
   User: rafael
   Date: 22/05/2020
   Time: 01:45
-  To change this template use File | Settings | File Templates.
 --%>
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
