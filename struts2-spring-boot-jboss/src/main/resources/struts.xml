@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @author  Rafael Barros <rafaelbarros.df@gmail.com> -->
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.objectFactory" value="spring"/>
+
+    <package name="core" namespace="/core" extends="struts-default">
+        <action name="hello-world" class="br.com.developer.action.HelloWorldAction">
+            <result name="success">/view/hello-world.jsp</result>
+        </action>
+    </package>
+
+</struts>
