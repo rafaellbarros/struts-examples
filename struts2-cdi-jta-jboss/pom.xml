@@ -4,7 +4,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.developer</groupId>
-    <artifactId>struts2-jboss-cdi-jta</artifactId>
+    <artifactId>struts2-cdi-jta-jboss</artifactId>
    	<version>0.0.1-SNAPSHOT</version>
     <name>Basic Struts2 Jboss CDI JTA Example</name>
     <description>Basic Struts2 Jboss CDI JTA example application</description>
@@ -102,7 +102,7 @@
 		</dependency>			
 	</dependencies>    
     <build>
-        <finalName>struts2-jboss-cdi-jta</finalName>
+        <finalName>struts2-cdi-jta-jboss</finalName>
         <plugins>      
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

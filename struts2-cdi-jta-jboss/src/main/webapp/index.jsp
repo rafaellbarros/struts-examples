@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Basic Struts2 Crud Jquery Application - Welcome</title>
+    <title>Struts2 CDI JTA Jboss Application - Welcome</title>
 </head>
 
 <body>
