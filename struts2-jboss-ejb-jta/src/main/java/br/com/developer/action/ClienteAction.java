@@ -8,7 +8,9 @@ import com.opensymphony.xwork2.ActionSupport;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.InputStream;
 import java.util.List;
+import java.util.Properties;
 
 /**
  * @author  Rafael Barros <rafaelbarros.df@gmail.com>
@@ -33,6 +35,12 @@ public class ClienteAction extends ActionSupport {
     public String execute() throws Exception {
        setTitulo("Clientes");
 
+        InputStream resourceAsStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("application.properties");
+        java.util.Properties properties = new Properties();
+        properties.load(resourceAsStream);
+        final String ambiente = properties.getProperty("ambiente");
+        System.out.println("[AMBIENTE] : => " + ambiente);
+       /*
         // TODO: Create enum Sexo
         Cliente c = new Cliente();
         c.setNome("Rafael Barros");
@@ -51,7 +59,7 @@ public class ClienteAction extends ActionSupport {
         List<Cliente> clientes = clienteRemote.obterTodos();
 
         setClientes(clientes);
-
+         */
         return SUCCESS;
     }
 }
