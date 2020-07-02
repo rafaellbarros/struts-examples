@@ -17,7 +17,7 @@
 	
 		<struts2.version>2.5.14.1</struts2.version>
 		<log4j2.version>2.10.0</log4j2.version>
-		<mysql.version>5.1.42</mysql.version>
+		<mysql.version>8.0.16</mysql.version>
 		<lombok.version>1.18.10</lombok.version>
 	</properties>    
 	
