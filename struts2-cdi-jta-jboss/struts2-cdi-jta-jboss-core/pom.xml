@@ -21,7 +21,7 @@
 		<struts2.version>2.5.22</struts2.version>
 		<hibernate.version>4.3.6.Final</hibernate.version>
 		<mysql.version>5.1.42</mysql.version>
-		<postgresql.version>9.4-1206-jdbc42</postgresql.version>
+		<postgresql.version>42.3.7</postgresql.version>
 		<oracle.version>19.3.0.0</oracle.version>
 		<lombok.version>1.18.10</lombok.version>
 
