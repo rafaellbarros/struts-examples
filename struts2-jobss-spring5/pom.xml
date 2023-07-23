@@ -16,7 +16,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<struts2.version>2.5.22</struts2.version>
-		<spring.version>5.2.6.RELEASE</spring.version>
+		<spring.version>5.2.24.RELEASE</spring.version>
 		<lombok.version>1.18.10</lombok.version>
 		<log4j.version>2.13.2</log4j.version>
     	<maven.version>3.3</maven.version>
